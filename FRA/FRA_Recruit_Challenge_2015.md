@@ -63,3 +63,8 @@ För att kolla om pdfen innehåller något som kan ta oss vidare vad den innehå
 ```
 strings FRA-arsrapport-2014.pdf
 ```
+Där hittar vi metadata som verkar lite suspekt.
+![img](https://i.imgur.com/o3NXPl1.png)
+Det ser ut som hex.  
+För att avkoda hex använder jag mig av Decodify(https://github.com/s0md3v/Decodify)
+![img](https://i.imgur.com/wD2CrGF.png)
