@@ -42,8 +42,8 @@ En ledtråd till kommande nivåer, Dr Evil återanvänder gärna sina lösenord 
 ```
 Under "Första nivån:" ser vi vad som ser ut att vara en MD5 hash, en snabb sökning på Google ger direkt lösenordet för att kunna extrahera steg2  
 Det är en MD5 hash  
-> FRA Recruit Challenge 2015
-![MD5 hash](https://i.imgur.com/LqGr2vO.png)
+![MD5 hash](https://i.imgur.com/LqGr2vO.png)  
+> FRA Recruit Challenge 2015  
 
 ##### Lösning 2
 Svaret finns i klartext, md5 hashen kan vi knäcka med hjälp av John The Ripper. Ordlistan har vi redan eftersom svaret står i klartext..
@@ -53,6 +53,9 @@ wordlist=readme
 john --format=raw-md5 --wordlist=readme readme
 FRA Recruit Challenge 2015
 ```
-
+Nu kan vi extrahera .zip med hjälp av lösenordet som vi knäckt.
 ### Steg2
+.zip innehåller en image fil
+I kali monterar jag filen, genom att första skapa mappen steg2mnt  
+![img](https://i.imgur.com/tSieeGP.png)
 
