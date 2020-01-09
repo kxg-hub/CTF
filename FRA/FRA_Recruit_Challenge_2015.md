@@ -67,11 +67,11 @@ strings FRA-arsrapport-2014.pdf
 Där hittar vi metadata som verkar lite suspekt.
 ![img](https://i.imgur.com/o3NXPl1.png)
 Det ser ut som hex.  
-För att avkoda hex använder jag mig av Decodify(https://github.com/s0md3v/Decodify)
+För att avkoda hex använder jag mig av Decodify(https://github.com/s0md3v/Decodify) som är extremt snabbt och simpelt.
 ![img](https://i.imgur.com/wD2CrGF.png)
 Det gav en base64 rad som i sin tur avkodas till vad som ser ut att vara ett cipher.  
 ```
-dcode "P DPSS OVSK AOL DVYSK YHUZVT MVY AOL ZBT VM VUL MYPJRPU TLLLSSPVU KVSSHYZ" -rot alll
+dcode "P DPSS OVSK AOL DVYSK YHUZVT MVY AOL ZBT VM VUL MYPJRPU TLLLSSPVU KVSSHYZ" -rot all
 ```
 ![img](https://i.imgur.com/dgA3jug.png)
 under rot19 ser vi vad som verkar vara lösenordet
