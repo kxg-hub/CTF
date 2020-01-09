@@ -74,9 +74,9 @@ Det gav en base64 rad som i sin tur avkodas till vad som ser ut att vara ett cip
 dcode "P DPSS OVSK AOL DVYSK YHUZVT MVY AOL ZBT VM VUL MYPJRPU TLLLSSPVU KVSSHYZ" -rot alll
 ```
 ![img](https://i.imgur.com/dgA3jug.png)
-decodify spottar ut svaret i gemener:  
+under rot19 ser vi vad som verkar vara lösenordet
 > i will hold the world ransom for the sum of one frickin meeellion dollars
-för att vi är lata och inte vill skriva om det till versaler 
+Decodify spottar ut output i gemener trots att vi matade den versaler.. eftersom en är lat och inte orkar skriva om det till versaler så gör vi det i Python 
 ```
 s = "i will hold the world ransom for the sum of one frickin meeellion dollars"
 print(s.upper())
@@ -85,6 +85,10 @@ I WILL HOLD THE WORLD RANSOM FOR THE SUM OF ONE FRICKIN MEEELLION DOLLARS
 ```
 Nu kan vi extrahera .zip filen steg3.arj med hjälp av lösenordet 
 ### Steg3
-steg3.arj innehåller steg3.pcap samt steg4.rar. Öppnar pcap filen med wireshark, verkar vara massa med trafik. För att enkelt kunna få en överblick så öppnar jag Protocol Hierarchy som finns under fliken Statistics.
+steg3.arj innehåller steg3.pcap samt steg4.rar. Öppnar pcap filen med wireshark, en snabb sökning på "credential" under packet details för att se om vi kan få ut något användbart, tyvärr inga träffar.
+För att enkelt kunna få en överblick så öppnar vi Protocol Hierarchy som finns under fliken Statistics.
 ![img](https://i.imgur.com/vs356y5.png)
-
+Det som spontant ser intressant ut är HTTP, SMB och FTP. En snabb sökning på credential för att se om vi kan få ut något. Tyvärr ingen träff.
+Under FTP trafiken kan vi se att Dr.Evil har loggat in till sin FTP server med credentials drevil:minime  
+Under HTTP ser vi att Dr.Evil läcker NTMLSSP credentials när han försöker logga in.
+![img](https://i.imgur.com/o2FwWRv.png)
