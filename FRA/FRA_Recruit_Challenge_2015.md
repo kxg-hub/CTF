@@ -55,7 +55,11 @@ FRA Recruit Challenge 2015
 ```
 Nu kan vi extrahera .zip med hjälp av lösenordet som vi knäckt.
 ### Steg2
-.zip innehåller en image fil
-I kali monterar jag filen, genom att första skapa mappen steg2mnt  
+steg .zip-filen innehåller en image. För att utforska den monterar jag den i kali linux.
 ![img](https://i.imgur.com/tSieeGP.png)
 
+Imagen innehåller en pdf FRA-arsrapport-2014 samt .zip steg3.arj. Efter att öppnat pdf och kikat igenom vad som ser ut att vara en helt vanlig årsrapport från FRA gör jag även om den till text (pdftotext) och söker efter olika nyckelord för att se om jag missat något.. Det ger inte någon träff.  
+För att kolla om pdfen innehåller något som kan ta oss vidare vad den innehåller.
+```
+strings FRA-arsrapport-2014.pdf
+```
