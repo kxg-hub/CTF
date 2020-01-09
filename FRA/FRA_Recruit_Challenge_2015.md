@@ -68,3 +68,17 @@ Där hittar vi metadata som verkar lite suspekt.
 Det ser ut som hex.  
 För att avkoda hex använder jag mig av Decodify(https://github.com/s0md3v/Decodify)
 ![img](https://i.imgur.com/wD2CrGF.png)
+Det gav en base64 rad som i sin tur avkodas till vad som ser ut att vara ett cipher.  
+```
+dcode "P DPSS OVSK AOL DVYSK YHUZVT MVY AOL ZBT VM VUL MYPJRPU TLLLSSPVU KVSSHYZ" -rot alll
+```
+![img](https://i.imgur.com/dgA3jug.png)
+decodify spottar ut svaret i gemener:  
+> i will hold the world ransom for the sum of one frickin meeellion dollars
+för att vi är lata och inte vill skriva om det i stora bokstäver gör vi det snabbt i ett python script
+```
+s = "i will hold the world ransom for the sum of one frickin meeellion dollars"
+print(s.upper())
+I WILL HOLD THE WORLD RANSOM FOR THE SUM OF ONE FRICKIN MEEELLION DOLLARS
+´´´
+
