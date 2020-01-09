@@ -6,6 +6,7 @@ Kategori: Nätverksanalys, pentestning och lösenordsforcering.
 ## Beskrivning
 Testa dina kunskaper i denna flerstegsuppgift. Kunskaper som krävs är nätverksanalys, pentestning och lösenordsforcering. Vi vill ha en rapport där du beskriver lösningen med de lösenord och instruktioner du hittade. Vi är intresserade av din ansökan och rapport även om du inte slutfört alla steg.
 
+### Readme
 ```
 FRA Recruit Challenge 2015
 --------------------------
@@ -36,3 +37,9 @@ d1b23a73cd77c23f32256ed204f11469
 
 En ledtråd till kommande nivåer, Dr Evil återanvänder gärna sina lösenord men med lite variationer.
 ```
+
+## Steg1
+Det första en möts av är något som ser ut som en hash, en snabb sökning på Google ger direkt lösenordet till steg2.  
+Det är en MD5-hash
+>! FRA Recruit Challenge 2015
+
