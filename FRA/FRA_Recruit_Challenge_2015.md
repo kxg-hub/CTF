@@ -85,5 +85,6 @@ I WILL HOLD THE WORLD RANSOM FOR THE SUM OF ONE FRICKIN MEEELLION DOLLARS
 ```
 Nu kan vi extrahera .zip filen steg3.arj med hjälp av lösenordet 
 ### Steg3
-steg3.arj innehåller 
+steg3.arj innehåller steg3.pcap samt steg4.rar. Öppnar pcap filen med wireshark, verkar vara massa med trafik. För att enkelt kunna få en överblick så öppnar jag Protocol Hierarchy som finns under fliken Statistics.
+![img](https://i.imgur.com/vs356y5.png)
 
