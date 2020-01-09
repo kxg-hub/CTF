@@ -7,11 +7,9 @@ Kategori: Nätverksanalys, pentestning och lösenordsforcering.
 Testa dina kunskaper i denna flerstegsuppgift. Kunskaper som krävs är nätverksanalys, pentestning och lösenordsforcering. Vi vill ha en rapport där du beskriver lösningen med de lösenord och instruktioner du hittade. Vi är intresserade av din ansökan och rapport även om du inte slutfört alla steg.
 
 ### Steg1
-Det första vi möts av en .zip fil som verkar vara lösenordsskyddad samt en readme textfil. är en något som ser ut som en hash, en snabb sökning på Google ger direkt lösenordet för att kunna extrahera steg2  
-Det är en MD5 hash  
-> FRA Recruit Challenge 2015
+Det första vi möts av en .zip fil som verkar vara lösenordsskyddad samt en readme textfil.
 
-# Readme
+#### Readme
 ``` 
 FRA Recruit Challenge 2015
 --------------------------
@@ -42,6 +40,10 @@ d1b23a73cd77c23f32256ed204f11469
 
 En ledtråd till kommande nivåer, Dr Evil återanvänder gärna sina lösenord men med lite variationer.
 ```
+Under "Första nivån:" ser vi vad som ser ut att vara en MD5 hash, en snabb sökning på Google ger direkt lösenordet för att kunna extrahera steg2  
+Det är en MD5 hash  
+> FRA Recruit Challenge 2015
+![MD5 hash](https://i.imgur.com/LqGr2vO.png)
 
 ##### Lösning 2
 Svaret finns i klartext, md5 hashen kan vi knäcka med hjälp av John The Ripper. Ordlistan har vi redan eftersom svaret står i klartext..
