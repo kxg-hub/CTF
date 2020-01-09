@@ -39,7 +39,14 @@ En ledtråd till kommande nivåer, Dr Evil återanvänder gärna sina lösenord 
 ```
 
 ## Steg1
-Det första en möts av är något som ser ut som en hash, en snabb sökning på Google ger direkt lösenordet till steg2.  
-Det är en MD5-hash
->! FRA Recruit Challenge 2015
-
+Det första en möts av är något som ser ut som en hash, en snabb sökning på Google ger direkt lösenordet till steg2  
+Det är en MD5 hash  
+> FRA Recruit Challenge 2015
+#### Lösning 2
+Svaret finns i klartext, md5 hashen kan vi knäcka med hjälp av John The Ripper. Ordlistan har vi redan eftersom svaret i klartext..
+format=raw-md5
+wordlist=readme
+```
+john --format=raw-md5 --wordlist=readme readme
+FRA Recruit Challenge 2015
+```
