@@ -80,7 +80,9 @@ för att vi är lata och inte vill skriva om det till versaler
 s = "i will hold the world ransom for the sum of one frickin meeellion dollars"
 print(s.upper())
 I WILL HOLD THE WORLD RANSOM FOR THE SUM OF ONE FRICKIN MEEELLION DOLLARS
+
 ´´´  
+
 Nu kan vi extrahera .zip filen steg3.arj med hjälp av lösenordet 
 ### Steg3
 steg3.arj innehåller 
