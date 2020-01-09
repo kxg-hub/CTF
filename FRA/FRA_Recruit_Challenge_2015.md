@@ -1,8 +1,10 @@
-FRA_Recruit_Challenge_2015  
-[FRA_Recruit_Challenge_2015](https://challenge.fra.se/FRA_Recruit_Challenge_2015.zip)
+FRA_Recruit_Challenge_2015
+Kategori: Nätverksanalys, pentestning och lösenordsforcering.
+[FRA_Recruit_Challenge_2015](https://challenge.fra.se/FRA_Recruit_Challenge_2015.zip)  
 (75 MB, 78092299 bytes, sha256: 942668aa12c00ef99907fc59e1e57745b0d7cc4fcb40570ea2f24062fd9c20cc)
 
 ## Beskrivning
+Testa dina kunskaper i denna flerstegsuppgift. Kunskaper som krävs är nätverksanalys, pentestning och lösenordsforcering. Vi vill ha en rapport där du beskriver lösningen med de lösenord och instruktioner du hittade. Vi är intresserade av din ansökan och rapport även om du inte slutfört alla steg.
 
 ```
 FRA Recruit Challenge 2015
