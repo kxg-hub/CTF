@@ -7,7 +7,7 @@ Kategori: Nätverksanalys, pentestning och lösenordsforcering.
 Testa dina kunskaper i denna flerstegsuppgift. Kunskaper som krävs är nätverksanalys, pentestning och lösenordsforcering. Vi vill ha en rapport där du beskriver lösningen med de lösenord och instruktioner du hittade. Vi är intresserade av din ansökan och rapport även om du inte slutfört alla steg.
 
 ### Steg1
-Det första vi möts av en .zip fil som verkar vara lösenordsskyddad samt en readme textfil.
+Det första vi möts av är en .zip fil som verkar vara lösenordsskyddad samt en readme textfil.
 
 #### Readme
 ``` 
@@ -75,10 +75,13 @@ dcode "P DPSS OVSK AOL DVYSK YHUZVT MVY AOL ZBT VM VUL MYPJRPU TLLLSSPVU KVSSHYZ
 ![img](https://i.imgur.com/dgA3jug.png)
 decodify spottar ut svaret i gemener:  
 > i will hold the world ransom for the sum of one frickin meeellion dollars
-för att vi är lata och inte vill skriva om det i stora bokstäver gör vi det snabbt i ett python script
+för att vi är lata och inte vill skriva om det till versaler 
 ```
 s = "i will hold the world ransom for the sum of one frickin meeellion dollars"
 print(s.upper())
 I WILL HOLD THE WORLD RANSOM FOR THE SUM OF ONE FRICKIN MEEELLION DOLLARS
-´´´
+´´´  
+Nu kan vi extrahera .zip filen steg3.arj med hjälp av lösenordet 
+### Steg3
+steg3.arj innehåller 
 
