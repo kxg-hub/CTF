@@ -85,10 +85,20 @@ I WILL HOLD THE WORLD RANSOM FOR THE SUM OF ONE FRICKIN MEEELLION DOLLARS
 ```
 Nu kan vi extrahera .zip filen steg3.arj med hjälp av lösenordet 
 ### Steg3
-steg3.arj innehåller steg3.pcap samt steg4.rar. Öppnar pcap filen med wireshark, en snabb sökning på "credential" under packet details för att se om vi kan få ut något användbart, tyvärr inga träffar.
-För att enkelt kunna få en överblick så öppnar vi Protocol Hierarchy som finns under fliken Statistics.
-![img](https://i.imgur.com/vs356y5.png)
+steg3.arj innehåller steg3.pcap samt steg4.rar. Öppnar pcap filen med wireshark, för att enkelt kunna få en överblick så öppnar vi Protocol Hierarchy som finns under fliken Statistics.
 Det som spontant ser intressant ut är HTTP, SMB och FTP.  
-Under FTP trafiken kan vi se att Dr.Evil har loggat in till sin FTP server med credentials drevil:minime  
-Under HTTP ser vi att Dr.Evil läcker NTMLSSP credentials.  
+![img](https://i.imgur.com/vs356y5.png)
+
+En snabb sökning på olika ord "credential,pwd och password" under packet bytes för att se om vi kan få ut något användbart. Password ger oss träffar och under FTP trafiken kan vi se att Dr.Evil har loggat in till sin FTP server med credentials drevil:minime och under FTP-DATA hittar vi vad som skulle kunna bara lösenordet till nästa steg:
+![img](https://i.imgur.com/CgbN0F1.png)
+```
+Del 3 av l.senordsfrasen till l.senordsarkivet, ta bort " kring l.senordet.
+
+"doctor for 30 frickin years"
+```
+Men "doctor for 30 frickin" funkar verkar inte funka i någon konstellation för att låsa upp steg4. Men vi sparar ner det då det kan komma till användning senare.
+
+Under HTTP ser vi att Dr.Evil läcker NTML credentials.
 ![img](https://i.imgur.com/o2FwWRv.png)
+
+För att extrahera hash från .pcap filen använder jag mig av ett färdigt python script av psychomario(https://github.com/psychomario/ntlmsspparse)
