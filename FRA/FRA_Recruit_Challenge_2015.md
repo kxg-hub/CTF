@@ -126,3 +126,6 @@ För att extrahera ntml hasher från .pcap filen använder jag mig av ett färdi
 
 Vi minns sedan tidigare ledtråden från readme textfilen
 > En ledtråd till kommande nivåer, Dr Evil återanvänder gärna sina lösenord men med lite variationer.
+
+Jag har provat med flera olika ordlistor samt skapat egna men är för närvarande fast här.
+![img](https://images.unsplash.com/photo-1533601017-dc61895e03c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)
