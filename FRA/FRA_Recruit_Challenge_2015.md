@@ -41,25 +41,25 @@ d1b23a73cd77c23f32256ed204f11469
 
 En ledtråd till kommande nivåer, Dr Evil återanvänder gärna sina lösenord men med lite variationer.
 ```
-Under "Första nivån:" ser ut som en MD5 hash, en snabb sökning på Google ger direkt lösenordet för att kunna extrahera steg2  
+Under "Första nivån:" Finns en hash som ser ut som en MD5 hash, en snabb sökning på Google ger direkt lösenordet för att kunna extrahera steg2  
 Det är en MD5 hash  
 ![MD5 hash](https://i.imgur.com/LqGr2vO.png)  
 > FRA Recruit Challenge 2015  
 
 ##### Lösning 2
-Svaret finns i klartext, md5 hashen kan knäckas med hjälp av John The Ripper. Ordlistan finns redan eftersom svaret står i klartext..
+MD5 hashen kan knäckas med hjälp av John The Ripper. Ordlistan finns redan eftersom readme-filen ska innehålla lösenordet i klartext..
 format=raw-md5
 wordlist=readme
 ```
-john --format=raw-md5 --wordlist=readme readme
+john --format=raw-md5 readme --wordlist=readme
 FRA Recruit Challenge 2015
 ```
-Nu kan steg2 extraheras med hjälp av lösenordet som jag knäckt.
+Nu kan steg2 extraheras med hjälp av lösenordet.
 ### Steg2
 steg .zip-filen innehåller en image. För att utforska den monterar jag den i kali linux.
 ![img](https://i.imgur.com/tSieeGP.png)
 
-Imagen innehåller en pdf FRA-arsrapport-2014 samt .zip steg3.arj. Efter att öppnat pdf och kikat igenom vad som ser ut att vara en helt vanlig årsrapport från FRA gör jag även om den till text (pdftotext) och söker efter olika nyckelord för att se om jag missat något.. Det ger inte någon träff.  
+Imag-filen innehåller en pdf "FRA-arsrapport-2014" samt .zip steg3.arj. Efter att öppnat pdf-filen och kikat igenom vad som ser ut att vara en helt vanlig årsrapport från FRA gör jag även om den till text (pdftotext) och söker efter olika nyckelord för att se om jag missat något.. Det ger inte någon träff.  
 För att kolla om pdfen innehåller något som kan ta oss vidare vad den innehåller.
 ```
 strings FRA-arsrapport-2014.pdf
