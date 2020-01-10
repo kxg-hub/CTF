@@ -103,7 +103,26 @@ Under HTTP ser vi att Dr.Evil läcker NTML credentials.
 
 För att extrahera ntml hasher från .pcap filen använder jag mig av ett färdigt python script av psychomario(https://github.com/psychomario/ntlmsspparse)
 
-
+```
+::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+:::1122334455667788::
+```
 
 Vi minns sedan tidigare ledtråden från readme textfilen
 > **En ledtråd till kommande nivåer, Dr Evil återanvänder gärna sina lösenord men med lite variationer.**
