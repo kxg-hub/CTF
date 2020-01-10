@@ -8,7 +8,7 @@ Kategori: Nätverksanalys, pentestning och lösenordsforcering.
 Testa dina kunskaper i denna flerstegsuppgift. Kunskaper som krävs är nätverksanalys, pentestning och lösenordsforcering. Vi vill ha en rapport där du beskriver lösningen med de lösenord och instruktioner du hittade. Vi är intresserade av din ansökan och rapport även om du inte slutfört alla steg.
 
 ### Steg1
-Det första vi möts av är en .zip fil som verkar vara lösenordsskyddad samt en readme textfil.
+Det första jag möts av är en .zip fil som verkar vara lösenordsskyddad samt en readme textfil.
 
 #### Readme
 ``` 
@@ -41,20 +41,20 @@ d1b23a73cd77c23f32256ed204f11469
 
 En ledtråd till kommande nivåer, Dr Evil återanvänder gärna sina lösenord men med lite variationer.
 ```
-Under "Första nivån:" ser vi vad som ser ut att vara en MD5 hash, en snabb sökning på Google ger direkt lösenordet för att kunna extrahera steg2  
+Under "Första nivån:" ser ut som en MD5 hash, en snabb sökning på Google ger direkt lösenordet för att kunna extrahera steg2  
 Det är en MD5 hash  
 ![MD5 hash](https://i.imgur.com/LqGr2vO.png)  
 > FRA Recruit Challenge 2015  
 
 ##### Lösning 2
-Svaret finns i klartext, md5 hashen kan vi knäcka med hjälp av John The Ripper. Ordlistan har vi redan eftersom svaret står i klartext..
+Svaret finns i klartext, md5 hashen kan knäckas med hjälp av John The Ripper. Ordlistan finns redan eftersom svaret står i klartext..
 format=raw-md5
 wordlist=readme
 ```
 john --format=raw-md5 --wordlist=readme readme
 FRA Recruit Challenge 2015
 ```
-Nu kan vi extrahera .zip med hjälp av lösenordet som vi knäckt.
+Nu kan steg2 extraheras med hjälp av lösenordet som jag knäckt.
 ### Steg2
 steg .zip-filen innehåller en image. För att utforska den monterar jag den i kali linux.
 ![img](https://i.imgur.com/tSieeGP.png)
@@ -64,7 +64,7 @@ För att kolla om pdfen innehåller något som kan ta oss vidare vad den innehå
 ```
 strings FRA-arsrapport-2014.pdf
 ```
-Där hittar vi metadata som verkar lite suspekt.
+Där hittar jag metadata som verkar lite suspekt.
 ![img](https://i.imgur.com/o3NXPl1.png)
 Det ser ut som hex.  
 För att avkoda hex använder jag mig av Decodify(https://github.com/s0md3v/Decodify) som är extremt snabbt och simpelt.
@@ -76,16 +76,16 @@ dcode "P DPSS OVSK AOL DVYSK YHUZVT MVY AOL ZBT VM VUL MYPJRPU TLLLSSPVU KVSSHYZ
 ![img](https://i.imgur.com/dgA3jug.png)
 under rot19 ser vi vad som verkar vara lösenordet
 > i will hold the world ransom for the sum of one frickin meeellion dollars
-Decodify spottar ut output i gemener trots att vi matade den versaler.. eftersom en är lat och inte orkar skriva om det till versaler så gör vi det i Python 
+Decodify spottar ut output i gemener trots att den matas den versaler.. eftersom en är lat och inte orkar skriva om det till versaler så gör jag det i Python 
 ```
 s = "i will hold the world ransom for the sum of one frickin meeellion dollars"
 print(s.upper())
 I WILL HOLD THE WORLD RANSOM FOR THE SUM OF ONE FRICKIN MEEELLION DOLLARS
 
 ```
-Nu kan vi extrahera .zip filen steg3.arj med hjälp av lösenordet 
+Nu kan steg3.arj (som är en .zip, det är en liten luring) extraheras med lösenordet. 
 ### Steg3
-steg3.arj innehåller steg3.pcap samt steg4.rar. Öppnar pcap filen med wireshark, för att enkelt kunna få en överblick så öppnar vi Protocol Hierarchy som finns under fliken Statistics.
+steg3.arj innehåller steg3.pcap samt steg4.rar. Öppnar pcap filen med wireshark, för att enkelt kunna få en överblick så öppnar jag Protocol Hierarchy som finns under fliken Statistics.
 Det som spontant ser intressant ut är HTTP, SMB och FTP.  
 ![img](https://i.imgur.com/vs356y5.png)
 
