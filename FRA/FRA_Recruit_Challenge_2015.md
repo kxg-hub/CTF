@@ -101,7 +101,7 @@ Men "doctor for 30 frickin" funkar verkar inte funka i någon konstellation för
 Under HTTP ser vi att Dr.Evil läcker NTML credentials.
 ![img](https://i.imgur.com/o2FwWRv.png)
 
-För att extrahera ntml hasher från .pcap filen använder jag mig av ett färdigt python script av psychomario(https://github.com/psychomario/ntlmsspparse)
+För att extrahera ntlm hasher från .pcap filen använder jag mig av ett färdigt python script av psychomario(https://github.com/psychomario/ntlmsspparse)
 
 ```
 ::1122334455667788::
